@@ -12,9 +12,9 @@
 - NodeJS and express
 
 ## RUN LOCALLY
-
+```
 clone using https://github.com/Charles9869/H-VER.git
-
+```
 ## SCREENSHOTS
 
 ### Homagepage
