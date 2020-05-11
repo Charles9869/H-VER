@@ -13,17 +13,17 @@
 
 ## RUN LOCALLY
 ```
-git clone https://github.com/Charles9869/H-VER.git
+$ git clone https://github.com/Charles9869/H-VER.git
 ```
 ```
-cd server
-yarn install
-yarn start
+$ cd server
+$ yarn install
+$ yarn start
 ```
 ```
-cd client
-yarn install
-yarn start
+$ cd client
+$ yarn install
+$ yarn start
 ```
 ## SCREENSHOTS
 
