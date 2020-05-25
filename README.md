@@ -12,9 +12,19 @@
 - NodeJS and express
 
 ## RUN LOCALLY
-
-clone using https://github.com/Charles9869/H-VER.git
-
+```
+$ git clone https://github.com/Charles9869/H-VER.git
+```
+```
+$ cd server
+$ yarn install
+$ yarn start
+```
+```
+$ cd client
+$ yarn install
+$ yarn start
+```
 ## SCREENSHOTS
 
 ### Homagepage
