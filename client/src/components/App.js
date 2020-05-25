@@ -30,14 +30,17 @@ function App() {
   useEffect(() => {
     // Fetches all the products
     dispatch(requestAllProducts());
-    fetch('/products')
+    fetch('https://hover-backend.herokuapp.com/products')
       .then((res) => res.json())
-      .then((data) => dispatch(receiveAllProducts(data)))
+      .then((data) => {
+        console.log(data);
+        dispatch(receiveAllProducts(data));
+      })
       .catch((err) => dispatch(receiveProductsError()));
 
     // Fetches all the companies
     dispatch(requestAllCompanies());
-    fetch('/companies')
+    fetch('https://hover-backend.herokuapp.com/companies')
       .then((res) => res.json())
       .then((data) => dispatch(receiveAllCompanies(data)))
       .catch((err) => dispatch(receiveCompaniesError()));

@@ -3,8 +3,9 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
+const cors = require('cors');
 
-const PORT = 4000;
+const PORT = process.env.PORT || 4000;
 
 // Import all the data
 const items = require('./data/items.json');
@@ -22,6 +23,7 @@ express()
     );
     next();
   })
+  .use(cors())
   .use(morgan('tiny'))
   .use(express.static('./server/assets'))
   .use(bodyParser.json())

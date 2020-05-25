@@ -18,7 +18,7 @@ const Categories = () => {
 
   // Fetch all the categories to display on the side
   React.useEffect(() => {
-    fetch('/categories')
+    fetch('https://hover-backend.herokuapp.com/categories')
       .then((res) => res.json())
       .then((data) => SetCategories(data));
   }, []);
@@ -26,7 +26,7 @@ const Categories = () => {
   const fetchProduct = () => {
     dispatch(requestAllProducts());
     fetch(
-      `/search?brand=${window.localStorage.getItem(
+      `https://hover-backend.herokuapp.com/search?brand=${window.localStorage.getItem(
         'brand'
       )}&category=${window.localStorage.getItem('category')}`
     )

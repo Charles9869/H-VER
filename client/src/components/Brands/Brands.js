@@ -16,7 +16,7 @@ const Brands = ({ companies }) => {
   const getProductsByBrands = () => {
     dispatch(requestAllProducts());
     fetch(
-      `/search?brand=${window.localStorage.getItem(
+      `https://hover-backend.herokuapp.com/search?brand=${window.localStorage.getItem(
         'brand'
       )}&category=${window.localStorage.getItem('category')}`
     )
@@ -31,7 +31,7 @@ const Brands = ({ companies }) => {
     /// Clears the localstorage
     window.localStorage.clear();
     dispatch(requestAllProducts());
-    fetch('/products')
+    fetch('https://hover-backend.herokuapp.com/products')
       .then((res) => res.json())
       .then((data) => {
         if (data.length > 0) dispatch(receiveAllProducts(data));

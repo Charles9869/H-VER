@@ -26,7 +26,7 @@ const Shop = () => {
     window.localStorage.clear();
     dispatch(requestAllProducts());
     dispatch(clearPage());
-    fetch('/products')
+    fetch('https://hover-backend.herokuapp.com/products')
       .then((res) => res.json())
       .then((data) => {
         if (data.length > 0) dispatch(receiveAllProducts(data));

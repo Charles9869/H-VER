@@ -21,7 +21,7 @@ const Cart = () => {
   };
 
   const handleSubmit = () => {
-    fetch('/products/purchase-item', {
+    fetch('https://hover-backend.herokuapp.com/products/purchase-item', {
       method: 'PUT',
       body: JSON.stringify(Object.values(products)),
       headers: {
